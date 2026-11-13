@@ -1,0 +1,61 @@
+t 1  red: scanned web-1: 1 weakness(es) found                    blue: waited
+t 2  red: scanned mail-1: 2 weakness(es) found                   blue: waited
+t 3  red: exploited rce-web on web-1: owned                      blue: waited
+t 4  red: stole credentials on web-1: 1 new target(s)            blue: waited
+t 5  red: moved laterally to mail-1                              blue: waited
+t 6  red: encrypted web-1                                        blue: waited
+t 7  red: encryption of mail-1 failed                            blue: restored mail-1 from clean image
+t 8  red: moved laterally to mail-1                              blue: waited
+t 9  red: encrypted mail-1                                       blue: restored mail-1 from clean image
+t10  red: moved laterally to mail-1                              blue: waited
+t11  red: encrypted mail-1                                       blue: waited
+t12  red: scanned db-1: 2 weakness(es) found                     blue: waited
+t13  red: exploited default-creds on db-1: owned                 blue: waited
+t14  red: staging data on db-1 (1/3)                             blue: waited
+t15  red: staging data on db-1 (2/3)                             blue: investigated db-1: inconclusive
+t16  red: exfiltrated data from db-1                             blue: investigated db-1: COMPROMISED
+t17  red: encrypted db-1                                         blue: restored db-1 from clean image
+t18  red: exploited default-creds on db-1: owned                 blue: waited
+t19  red: encrypted db-1                                         blue: restored db-1 from clean image
+t20  red: exploited default-creds on db-1: owned                 blue: waited
+t21  red: encryption of db-1 failed                              blue: restored db-1 from clean image
+t22  red: exploited default-creds on db-1: owned                 blue: waited
+t23  red: encrypted db-1                                         blue: waited
+t24  red: scanned backup-1: 1 weakness(es) found                 blue: waited
+t25  red: exploit of exposed-share on backup-1 failed            blue: waited
+t26  red: exploit of exposed-share on backup-1 failed            blue: waited
+t27  red: exploited exposed-share on backup-1: owned             blue: waited
+t28  red: encrypted backup-1                                     blue: waited
+t29  red: scanned dc-1: 2 weakness(es) found                     blue: waited
+t30  red: exploit of kerberoast on dc-1 failed                   blue: waited
+t31  red: exploited kerberoast on dc-1: owned                    blue: waited
+t32  red: encrypted dc-1                                         blue: restore of dc-1 failed: backups are encrypted
+t33  red: scanned file-1: 1 weakness(es) found                   blue: restored backup-1 from clean image
+t34  red: exploited exposed-share on backup-1: owned             blue: waited
+t35  red: encrypted backup-1                                     blue: waited
+t36  red: exploited weak-rdp on file-1: owned                    blue: waited
+t37  red: encrypted file-1                                       blue: restore of file-1 failed: backups are encrypted
+t38  red: scanned ws-1: 2 weakness(es) found                     blue: restored backup-1 from clean image
+t39  red: exploit of exposed-share on backup-1 failed            blue: waited
+t40  red: exploit of exposed-share on backup-1 failed            blue: waited
+t41  red: exploit of exposed-share on backup-1 failed            blue: waited
+t42  red: exploit of exposed-share on backup-1 failed            blue: waited
+t43  red: exploit of exposed-share on backup-1 failed            blue: waited
+t44  red: exploit of exposed-share on backup-1 failed            blue: waited
+t45  red: exploited exposed-share on backup-1: owned             blue: waited
+t46  red: encrypted backup-1                                     blue: waited
+t47  red: exploited phishable on ws-1: owned                     blue: waited
+t48  red: scanned ws-2: 1 weakness(es) found                     blue: waited
+t49  red: exploit of weak-rdp on ws-2 failed                     blue: waited
+t50  red: exploit of weak-rdp on ws-2 failed                     blue: waited
+t51  red: exploited weak-rdp on ws-2: owned                      blue: waited
+t52  red: scanned ws-3: 1 weakness(es) found                     blue: waited
+t53  red: exploited weak-rdp on ws-3: owned                      blue: waited
+t54  red: scanned ws-4: 1 weakness(es) found                     blue: waited
+t55  red: exploit of weak-rdp on ws-4 failed                     blue: waited
+t56  red: exploit of weak-rdp on ws-4 failed                     blue: waited
+t57  red: exploited weak-rdp on ws-4: owned                      blue: investigated ws-4: COMPROMISED
+t58  red: stole credentials on web-1: 3 new target(s)            blue: isolated ws-4
+t59  red: invalid: ws-4 is not reachable                         blue: restored ws-4 from clean image
+t60  red: exploited weak-rdp on ws-4: owned                      blue: waited
+ransom-rush vs alert-driven (seed 4): blue 15.7, red 78, exfiltrated [db-1], encrypted 6, business cost 0.3, detected at 16

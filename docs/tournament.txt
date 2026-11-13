@@ -1,0 +1,9 @@
+blue score (higher is better), mean of 30 seeds
+
+                       passive  alert-driven threat-hunter      paranoid
+noisy-scanner             17.8          21.2          95.2           0.0
+stealth-apt               53.1          52.1          53.3           9.6
+ransom-rush               16.3          19.9          48.6           3.8
+
+blue leaderboard: threat-hunter 65.7 > alert-driven 31.1 > passive 29.1 > paranoid 4.5
+red leaderboard:  ransom-rush 58.2 > noisy-scanner 50.1 > stealth-apt 46.3

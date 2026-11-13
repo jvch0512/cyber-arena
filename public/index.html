@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>cyber-arena</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>cyber-arena</h1>
+  <p class="sub">An autonomous attacker and an autonomous defender fight over a simulated company network. Each sees only its half of the world. Same seed, same fight.</p>
+</header>
+<main>
+  <section class="panel controls">
+    <label>Red team<select id="red"></select></label>
+    <label>Blue team<select id="blue"></select></label>
+    <label>Seed<input id="seed" type="number" min="1" max="99999" value="4"></label>
+    <button id="run" type="button">Fight</button>
+    <button id="tourney" type="button">Run tournament (30 seeds)</button>
+  </section>
+  <section id="match" hidden>
+    <div class="score" id="score"></div>
+    <div class="grid">
+      <div class="panel"><svg id="net" viewBox="0 0 720 400" role="img" aria-label="Network state"></svg>
+        <div class="legend"><span class="k k-own">attacker owns</span><span class="k k-enc">encrypted</span><span class="k k-iso">isolated</span><span class="k k-known">blue confirmed</span><span class="k k-x">data stolen</span></div>
+        <div class="player"><button id="play" type="button">Play</button><input id="turn" type="range" min="0" max="60" value="0" aria-label="Turn"><span id="tlabel">turn 0</span></div>
+      </div>
+      <div class="panel"><h2>Turn log</h2><div id="log"></div></div>
+    </div>
+  </section>
+  <section id="tour" class="panel" hidden><h2>Tournament: blue score, mean of 30 seeds</h2><table id="matrix"></table><p id="boards" class="hint"></p></section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
