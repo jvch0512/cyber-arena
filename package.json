@@ -12,6 +12,6 @@
   },
   "repository": "github:jvch0512/cyber-arena",
   "keywords": ["red-team", "blue-team", "simulation", "cyber-range", "autonomous-agents", "detection-engineering", "ai-security", "typescript"],
-  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" },
+  "devDependencies": { "@types/node": "^26.6.6", "typescript": "^7.0.2" },
   "engines": { "node": ">=20" }
 }
